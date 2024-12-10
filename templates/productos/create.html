@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+{%block title %}PRODUCTOS|CREATE{%endblock%}
+{%block content%}
+<h1>REGISTRO DE PRODUCTOS</h1>
+<form action="{{url_for('producto.create')}}" method="POST">
+    <div class="mb-3">
+        <label for="" class="form-label">Descripcion</label>
+        <input type="text" class="form-control" name="descripcion" required>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Precio</label>
+        <input type="number" class="form-control" min="0" step="0.01" name="precio" required>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Stock</label>
+        <input type="text" class="form-control" name="stock" required>
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Registrar Producto</button>
+</form>
+
+{%endblock%}
